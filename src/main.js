@@ -32,7 +32,7 @@ const createNavTemplate = () => {
           >STATISTICS</label
         >
       </section>`
-  )
+  );
 };
 
 const createFilterTemplate = () => {
@@ -96,8 +96,8 @@ const createFilterTemplate = () => {
           >Archive <span class="filter__archive-count">115</span></label
         >
       </section>`
-  )
-}
+  );
+};
 
 const createBoardTemplate = () => {
   return (

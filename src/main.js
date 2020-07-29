@@ -1,4 +1,6 @@
-'use strict';
+"use strict";
+
+const TASK_COUNT = 3;
 
 const createNavTemplate = () => {
   return (
@@ -370,5 +372,10 @@ const boardElement = mainElement.querySelector(`.board`);
 const taskListElement = boardElement.querySelector(`.board__tasks`);
 
 render(taskListElement, createTaskEditTemplate(), `beforeend`);
-render(taskListElement, createTaskTemplate(), `beforeend`);
+
+for (let i = 0; i < TASK_COUNT; i++) {
+  render(taskListElement, createTaskTemplate(), `beforeend`);
+}
+
+
 render(boardElement, createLoadMoreButtonTemplate(), `beforeend`);

@@ -361,8 +361,8 @@ const render = (container, template, place) => {
   container.insertAdjacentHTML(place, template);
 };
 
-const mainElement = document.querySelector('.main');
-const mainControlElement = document.querySelector('.main__control');
+const mainElement = document.querySelector(`.main`);
+const mainControlElement = document.querySelector(`.main__control`);
 
 render(mainControlElement, createNavTemplate(), `beforeend`);
 render(mainElement, createFilterTemplate(), `beforeend`);

@@ -3,7 +3,7 @@ import {
 } from "../const.js";
 import {
   getRandomInteger
-} from "../utils.js";
+} from "../utils/common.js";
 
 const generateDescription = () => {
   const descriptions = [

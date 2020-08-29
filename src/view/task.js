@@ -1,9 +1,10 @@
+import he from "he";
 import AbstractView from "./abstract.js";
 
 import {
   isTaskExpired,
   isTaskRepeating,
-  humanizeTaskDueDate
+  formatTaskDueDate
 } from "../utils/task.js";
 
 const createTaskTemplate = (task) => {
@@ -16,7 +17,7 @@ const createTaskTemplate = (task) => {
     isFavorite
   } = task;
 
-  const date = dueDate !== null ? humanizeTaskDueDate(dueDate) : ``;
+  const date = formatTaskDueDate(dueDate);
 
   const deadlineClassName = isTaskExpired(dueDate) ?
     `card--deadline` :
@@ -58,7 +59,7 @@ const createTaskTemplate = (task) => {
                 </svg>
               </div>
               <div class="card__textarea-wrap">
-                <p class="card__text">${description}</p>
+                <p class="card__text">${he.encode(description)}</p>
               </div>
               <div class="card__settings">
                 <div class="card__details">
